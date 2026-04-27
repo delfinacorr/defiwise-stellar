@@ -198,156 +198,150 @@ En este curso trabajamos en **Stellar Testnet** para que puedas practicar sin ri
       },
       {
         id: "mod-2",
-        title: "¿Cómo funciona DeFi?",
-        description: "Protocolos, liquidez y los building blocks de DeFi",
+        title: "Smart Contracts:",
+        description: "Descubrí cómo el código reemplaza a los intermediarios y garantiza la transparencia.",
         color: "pink",
-        rewardXP: 75,
+        rewardXP: 150,
         nftImage: "/nft/nft2.svg",
         lessons: [
           {
             id: "les-2-1",
-            title: "Tokens y activos digitales",
-            description:
-              "Qué son los tokens, tipos de tokens y cómo representan valor en blockchain.",
+            title: "¿Qué es un Smart Contract?",
+            description: "Entendé los fundamentos de los contratos autoejecutables.",
             durationMinutes: 10,
-            content: `## Tokens y Activos Digitales
+            content: `## ¿Qué es un Smart Contract?
+Un contrato inteligente (Smart Contract) es un programa informático que se ejecuta automáticamente cuando se cumplen condiciones predefinidas. En DeFi, estos contratos reemplazan a los intermediarios tradicionales.
 
-Un token es una representación digital de valor en una blockchain. Hay varios tipos:
+**Características principales:**
+- **Autoejecutables** — No requieren que una persona "presione un botón" para que funcionen.
+- **Digitales** — Viven íntegramente en la blockchain.
+- **Sin confianza** — No necesitás confiar en la otra parte, solo en el código.
 
-### Tokens fungibles
-- Cada unidad es idéntica e intercambiable (como el dinero)
-- Ejemplos: USDC, XLM, PATH
-- En Stellar se crean como **Stellar Assets** o **Soroban tokens**
-
-### Tokens no fungibles (NFTs)
-- Cada uno es único e irrepetible
-- Representan propiedad de algo específico: arte, certificados, badges
-- En este curso, ganás NFTs únicos por completar módulos
-
-### Stablecoins
-- Tokens cuyo valor está atado a una moneda fiat (ej: USDC = 1 USD)
-- Son la base de DeFi porque dan estabilidad
-- Stellar tiene varias stablecoins nativas con on/off ramps fiat`,
+### ¿Por qué son importantes?
+En el sistema financiero tradicional, si querés pedir un préstamo, un banco debe evaluar tu perfil y liberar los fondos. En DeFi, un Smart Contract puede retener tu garantía y entregarte el préstamo al instante, sin preguntas.`,
           },
           {
             id: "les-2-2",
-            title: "DEX y AMMs",
-            description:
-              "Exchanges descentralizados, automated market makers y cómo funciona el trading sin intermediarios.",
+            title: "Propiedades Críticas",
+            description: "Inmutabilidad, transparencia y determinismo.",
             durationMinutes: 12,
-            content: `## DEX y AMMs
+            content: `## Propiedades Críticas
+Para que un Smart Contract sea confiable en un entorno descentralizado, debe cumplir con ciertas propiedades fundamentales.
 
-Un **DEX** (exchange descentralizado) permite intercambiar tokens sin intermediarios. No hay una empresa detrás — el código maneja todo.
+### Inmutabilidad
+Una vez que el código se despliega en la red, **no puede ser modificado**. Esto garantiza que las reglas del juego no cambien a mitad del camino. Si hay un error, se debe desplegar un nuevo contrato.
 
-### ¿Cómo funciona un AMM?
-Un **Automated Market Maker** usa pools de liquidez en vez de un libro de órdenes:
+### Transparencia
+Cualquiera puede ver el código fuente del contrato y todas las transacciones que ha realizado. Esto permite auditorías públicas y asegura que el contrato haga exactamente lo que dice que hace.
 
-1. Proveedores de liquidez depositan pares de tokens (ej: XLM/USDC)
-2. La fórmula x * y = k determina el precio automáticamente
-3. Los traders intercambian contra el pool, no contra otra persona
-
-### DEXs en Stellar
-- **SDEX**: el exchange descentralizado nativo de Stellar, integrado al protocolo
-- **Soroswap**: AMM estilo Uniswap construido sobre Soroban
-- **Phoenix**: DEX con order book en Soroban
-
-### Ventajas de un DEX
-- Sin registro ni KYC para operar
-- Tus fondos siempre están en tu wallet
-- Transparencia total — el código es público`,
+### Determinismo
+Un Smart Contract siempre producirá el mismo resultado para las mismas entradas, sin importar quién lo ejecute o cuándo.`,
           },
           {
             id: "les-2-3",
-            title: "Lending y Borrowing",
-            description:
-              "Cómo funcionan los protocolos de préstamos descentralizados.",
-            durationMinutes: 10,
-            content: `## Lending y Borrowing
+            title: "Soroban & Stellar",
+            description: "La plataforma de smart contracts de próxima generación.",
+            durationMinutes: 15,
+            content: `## Soroban & Stellar
+Soroban es la plataforma de contratos inteligentes de Stellar, diseñada para ser eficiente, segura y escalable.
 
-Los protocolos de lending te permiten prestar y pedir prestado sin un banco.
+### ¿Por qué Soroban?
+- **Basado en Rust** — Utiliza un lenguaje moderno y seguro que previene muchos errores comunes de programación.
+- **Optimizado** — Diseñado específicamente para alto rendimiento y bajas comisiones.
+- **Integración nativa** — Se conecta perfectamente con los activos de Stellar (como USDC o XLM).
 
-### ¿Cómo funciona?
-1. **Lenders** depositan tokens en un pool y ganan intereses
-2. **Borrowers** depositan colateral y piden prestado contra él
-3. Los intereses se calculan algorítmicamente según oferta/demanda
-
-### Colateral y liquidación
-- Siempre necesitás depositar **más** de lo que pedís prestado (sobre-colateralización)
-- Si tu colateral baja de valor, el protocolo lo liquida para proteger a los lenders
-- Ejemplo: depositás 150 USDC de colateral para pedir 100 USDC prestados
-
-### Blend en Stellar
-**Blend** es el protocolo de lending/borrowing principal en Stellar:
-- Pools de préstamos con tasas variables
-- Soporte para XLM, USDC y otros activos
-- Construido sobre Soroban`,
+### El ecosistema Stellar
+Stellar ya era excelente para pagos rápidos. Con Soroban, ahora permite crear protocolos complejos como exchanges descentralizados (DEX), sistemas de préstamos y mucho más, manteniendo la velocidad y bajos costos.`,
           },
         ],
         quiz: [
           {
             id: "q-2-1",
-            prompt: "¿Qué es un token fungible?",
+            prompt: "¿Qué sucede con un Smart Contract una vez que se despliega en la red?",
             options: [
               {
-                text: "Un token único e irrepetible",
+                text: "Puede ser editado por cualquier usuario",
                 isCorrect: false,
               },
               {
-                text: "Un token donde cada unidad es idéntica e intercambiable",
+                text: "Es inmutable y no puede ser modificado arbitrariamente",
                 isCorrect: true,
               },
               {
-                text: "Un token que solo existe en Ethereum",
+                text: "Expira automáticamente después de 24 horas",
                 isCorrect: false,
               },
               {
-                text: "Un token que no se puede transferir",
+                text: "Debe ser aprobado por un banco central",
                 isCorrect: false,
               },
             ],
           },
           {
             id: "q-2-2",
-            prompt: "¿Qué usa un AMM en vez de un libro de órdenes?",
+            prompt: "¿Quién puede auditar el código de un Smart Contract en DeFi?",
             options: [
-              { text: "Inteligencia artificial", isCorrect: false },
-              { text: "Pools de liquidez", isCorrect: true },
-              { text: "Un servidor centralizado", isCorrect: false },
-              { text: "Subastas en tiempo real", isCorrect: false },
+              {
+                text: "Solo el creador del contrato",
+                isCorrect: false,
+              },
+              {
+                text: "Solo agencias gubernamentales",
+                isCorrect: false,
+              },
+              {
+                text: "Cualquier persona, ya que el código es transparente y público",
+                isCorrect: true,
+              },
+              {
+                text: "Nadie, el código está encriptado y es privado",
+                isCorrect: false,
+              },
             ],
           },
           {
             id: "q-2-3",
-            prompt:
-              "En un protocolo de lending, ¿qué pasa si el colateral baja mucho de valor?",
+            prompt: "¿Qué lenguaje de programación se utiliza principalmente en Soroban?",
+            options: [
+              { text: "Solidity", isCorrect: false },
+              { text: "Rust", isCorrect: true },
+              { text: "JavaScript", isCorrect: false },
+              { text: "Python", isCorrect: false },
+            ],
+          },
+          {
+            id: "q-2-4",
+            prompt: "¿Cuál es el beneficio principal de reemplazar intermediarios con código?",
             options: [
               {
-                text: "No pasa nada, el préstamo sigue igual",
+                text: "Hace que los procesos sean más lentos",
                 isCorrect: false,
               },
               {
-                text: "El protocolo liquida el colateral para proteger a los lenders",
+                text: "Aumenta los costos operativos",
+                isCorrect: false,
+              },
+              {
+                text: "Garantiza transparencia y reduce el error humano",
                 isCorrect: true,
               },
               {
-                text: "El borrower recibe más tokens gratis",
-                isCorrect: false,
-              },
-              {
-                text: "El protocolo se apaga automáticamente",
+                text: "Requiere más intervención manual",
                 isCorrect: false,
               },
             ],
           },
           {
-            id: "q-2-4",
-            prompt:
-              "¿Cuál de estos es el DEX nativo integrado al protocolo de Stellar?",
+            id: "q-2-5",
+            prompt: "¿Cuál es la relación entre Soroban y Stellar?",
             options: [
-              { text: "Uniswap", isCorrect: false },
-              { text: "Soroswap", isCorrect: false },
-              { text: "SDEX", isCorrect: true },
-              { text: "PancakeSwap", isCorrect: false },
+              { text: "Son redes competidoras sin relación", isCorrect: false },
+              {
+                text: "Soroban es la plataforma de smart contracts de la red Stellar",
+                isCorrect: true,
+              },
+              { text: "Soroban es una blockchain separada", isCorrect: false },
+              { text: "Soroban es simplemente una billetera para Stellar", isCorrect: false },
             ],
           },
         ],
